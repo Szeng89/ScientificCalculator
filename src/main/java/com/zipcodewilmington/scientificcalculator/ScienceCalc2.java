@@ -2,43 +2,56 @@ package com.zipcodewilmington.scientificcalculator;
 import java.util.Scanner;
 import java.util.Arrays;
 public class ScienceCalc2 {
+    Core2 core2 = new Core2();
 
     public double sine(double input) {
         return Math.sin(input);
     }
+
     public double cosine(double input) {
         return Math.cos(input);
     }
+
     public double tangent(double input) {
         return Math.tan(input);
     }
+
     public double sineD(double input) {
         return Math.sin(Math.toRadians(input));
     }
+
     public double cosD(double input) {
         return Math.cos(Math.toRadians(input));
     }
+
     public double tanD(double input) {
         return Math.tan(Math.toRadians(input));
     }
+
     public double asin(double input) {
         return Math.asin(input);
     }
+
     public double acos(double input) {
         return Math.acos(input);
     }
+
     public double atan(double input) {
         return Math.atan(input);
     }
+
     public double asinD(double input) {
         return Math.toDegrees(Math.asin(input));
     }
+
     public double acosD(double input) {
         return Math.toDegrees(Math.acos(input));
     }
+
     public double atanD(double input) {
         return Math.toDegrees(Math.atan(input));
     }
+
     public long factorial(int n) {
         long fact = 1;
         for (int i = 1; i <= n; i++) {
@@ -56,7 +69,7 @@ public class ScienceCalc2 {
         System.out.println("2. Degrees");
         System.out.println("3. Go Back");
         System.out.println("4. Factorial");
-        System.out.println("5. Memory");
+        System.out.println("5. Main Menu");
 
         int choice = scanner.nextInt();
 
@@ -190,64 +203,13 @@ public class ScienceCalc2 {
                 break;
 
             case 5:
-                System.out.println("You are in Memory");
-                System.out.println("1. M+ 2. MC 3. MRC 4. Go Back");
+                core2.calculator();
 
-                int input4 = scanner.nextInt();
-
-                switch (input4) {
-                    case 1:
-                        int input9 = scanner.nextInt();
-
-                        int[] memory = new int[1];
-
-                        System.out.println(Arrays.toString(memory));
-
-                        for (int i = 0; i < memory.length; i++) {
-                            memory[i] = input9;
-                        }
-
-                        System.out.println(Arrays.toString(memory));
-                        calculator2();
-                        break;
-
-                    /*case 2:
-                        System.out.println(Arrays.toString(memory));
-                        System.out.println("Memory was reset");
-                        memory[1] = 0:
-                        System.out.println(Arrays.toString(memory));
-                        calculator2();
-                        break;*/
-
-                }
-
-
-
+            default:
+                calculator2();
+                break;
 
 
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

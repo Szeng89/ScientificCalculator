@@ -8,16 +8,14 @@ import java.util.Scanner;
  */
 public class MainApplication {
     public static void main(String[] args) {
+        Core2 core2 = new Core2();
+        core2.calculator();
 
-        Scanner scanner = new Scanner(System.in);
-
-//        Core2 calculator = new Core2();
-        //      calculator.calculator();
-
-        ScienceCalc2 calculator2 = new ScienceCalc2();
-        calculator2.calculator2();
-
+       // ScienceCalc2 calculator2 = new ScienceCalc2();
+        //calculator2.calculator2();
     }
 }
+
+
 
 
